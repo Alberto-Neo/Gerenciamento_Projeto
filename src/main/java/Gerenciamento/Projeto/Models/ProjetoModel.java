@@ -21,7 +21,7 @@ public class ProjetoModel {
     private LocalDate dataInicio;
 
     @Column(name = "c_data final")
-    private Local datafim;
+    private LocalDate datafim;
 
     public long getId() {
         return id;
@@ -47,11 +47,11 @@ public class ProjetoModel {
         this.dataInicio = dataInicio;
     }
 
-    public Local getDatafim() {
+    public LocalDate getDatafim() {
         return datafim;
     }
 
-    public void setDatafim(Local datafim) {
+    public void setDatafim(LocalDate datafim) {
         this.datafim = datafim;
     }
 }

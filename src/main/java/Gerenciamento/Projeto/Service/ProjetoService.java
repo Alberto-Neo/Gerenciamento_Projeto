@@ -1,7 +1,7 @@
 package Gerenciamento.Projeto.Service;
 
 import Gerenciamento.Projeto.Models.ProjetoModel;
-import Gerenciamento.Projeto.Repository.Projetorepository;
+import Gerenciamento.Projeto.Repository.ProjetoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,9 +10,9 @@ import java.util.List;
 @Service
 public class ProjetoService {
     @Autowired
-    private Projetorepository projetoRepository;
+    private ProjetoRepository projetoRepository;
 
-    public ProjetoService(Projetorepository projetoRepository) {
+    public ProjetoService(ProjetoRepository projetoRepository) {
         this.projetoRepository = projetoRepository;
     }
 
