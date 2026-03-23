@@ -10,26 +10,26 @@ import java.util.List;
 @Service
 public class ProjetoService {
     @Autowired
-    private Projetorepository projetorepository;
+    private Projetorepository projetoRepository;
 
-    public ProjetoService(Projetorepository projetorepository) {
-        this.projetorepository = projetorepository;
+    public ProjetoService(Projetorepository projetoRepository) {
+        this.projetoRepository = projetoRepository;
     }
 
-    public List<ProjetoModel> Listar() {
-        return projetorepository.findAll();
+    public List<ProjetoModel> Listar(){
+        return projetoRepository.findAll();
     }
 
-    public ProjetoModel salvar(ProjetoModel livroModel){
-        return projetorepository.save(livroModel);
+    public ProjetoModel buscar(long id){
+        return projetoRepository.findById(id).get();
     }
 
-    public void deletar(Long id){
-        projetorepository.deleteById(id);
+    public ProjetoModel criar(ProjetoModel projetoModel){
+        return projetoRepository.save(projetoModel);
     }
 
-    public ProjetoModel buscar(Long id){
-        return projetorepository.findById(id).get();
+    public void deletar(long id){
+        projetoRepository.deleteById(id);
     }
 
 }
